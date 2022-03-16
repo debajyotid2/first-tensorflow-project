@@ -11,7 +11,7 @@ from tensorflow import keras
 train_images, test_images = train_images/255.0, test_images/255.0
 
 # validation split
-val_size = 10000
+val_size = len(test_images)
 val_idx = np.random.randint(0, len(train_labels), size=len(train_labels))
 val_images, val_labels = train_images[val_idx[:val_size]
                                       ], train_labels[val_idx[:val_size]]
